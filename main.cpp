@@ -1,4 +1,4 @@
-#ifdef MAIN
+//#ifdef MAIN
 
 #include "ABDQ.hpp"
 #include "ABQ.hpp"
@@ -20,9 +20,25 @@
 
 int main() {
 
+    LinkedList<int> list;
+    
+    list.addHead(20);
+    list.addHead(30);
+    list.addHead(40);
+    list.printForward();
+    list.printReverse();
+    int length = list.getCount();
+    std::cout << length << std::endl;
+    LinkedList<int>::Node* head = list.getHead();
+    std::cout << head->data << std::endl;
 
+    LinkedList<int> list2;
+    list2.addHead(25);
+    list2 = list;
+    list2.printForward();
     return 0;
+
 }
 
 
-#endif
+//#endif
